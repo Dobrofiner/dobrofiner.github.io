@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Кликер</title>
+<script>
+var ini = function () { btn.onclick = myFunction; }
+function myFunction() {
+var a = 0; //Задаем переменную-счетчик
+while (true) { //Вечный цикл, который позволит нашей программе работать повторно
+alert("Ваш счет - "  + a); //Выводит сообщение с счетом игрока
+a++; } //Прибавление к переменной единицы, конец цикла
+}
+window.onload = ini;
+</script>
+</head>
+<body bgcolor="blue">
+<div style="text-align:center">
+<button id="btn">Старт</button>
+</div>
+<p font face="Arial">При нажатии на кнопку старт игра начнется.Её перезагрузка страницы не остановит. Только закрыть страницу</p>
+</body>
+</html>
