@@ -1,0 +1,3 @@
+User-Agent: *
+Sitemap: https://dobroposter.netlify.app/sitemap.xml
+Allow: /

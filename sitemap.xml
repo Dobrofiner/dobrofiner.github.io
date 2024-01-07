@@ -1,0 +1,26 @@
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://dobroposter.netlify.app/</loc>
+<priority>0.5</priority>
+<changefreq>daily</changefreq>
+<lastmod>2023-12-21</lastmod>
+</url>
+<url>
+<loc>https://dobroposter.netlify.app/minutecraft/minutecraft</loc>
+<priority>0.5</priority>
+<changefreq>daily</changefreq>
+<lastmod>2023-12-21</lastmod>
+</url>
+<url>
+<loc>https://dobroposter.netlify.app/clicker/click</loc>
+<priority>0.5</priority>
+<changefreq>daily</changefreq>
+<lastmod>2023-12-21</lastmod>
+</url>
+<url>
+<loc>https://dobroposter.netlify.app/msiope/</loc>
+<priority>0.5</priority>
+<changefreq>daily</changefreq>
+<lastmod>2023-12-21</lastmod>
+</url>
+</urlset>
