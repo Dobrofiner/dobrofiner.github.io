@@ -4,7 +4,7 @@
 	"description": "Minecraft Sandbox Ixer 2 Only pc edition  is the updated version of Minecraft Sandbox Ixer 2 Construct 2 Edition, it is only for pc                                                       Controls of the game:\n\ns - save to slot 1\n\nl - load from slot 1\n\nz -save to slot 2\n\nx-load from slot 2\n\nand for save on mobile click on buttons with text save slot 1, load slot 1,save slot 2, load slot2\n\nuse joystick on mobile phones to move\n\narrows- to move on pc\n\nto create items click on inventory\n\nesc-exit from the world, and button on the right side of the screen it to exit from the world                                    E -TO teleport to transformatorteleportator 3000\nR to create first portal                                                                                              T to create second portal                                                                                                                       P -TO PAUSE GAME                                                                                                      O TO UNPAUSE                                                                                                                         1,2 TO CHANGE SKIN     ON MOBILE USE BUTTONS\nCredits:\n\nAll code by Dobroposter top\n\nSprites by BBoy Huggy-Waggy\n\nEngine -Construct 3                        ",
 	"start_url": "index.html",
 	"display": "fullscreen",
-	"orientation": "any",
+	"orientation": "landscape",
 	"background_color": "#ffffff",
 	"icons": [
 		{
