@@ -1,26 +1,46 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta
-  name="description"
-  content="Это кликер в котором игру нельзя рестартнуть перезагрузкой сайта, только закрытие страницы это остановит">
+<title>Кликер с сохранением</title>
+<meta name="description" content="Это кликер с возможностью сохранения и загрузки.">
 <meta charset="UTF-8">
-<title>Кликер</title>
 <script>
-var ini = function () { btn.onclick = myFunction; }
-function myFunction() {
-var a = 0; //Задаем переменную-счетчик
-while (true) { //Вечный цикл, который позволит нашей программе работать повторно
-alert("Ваш счет - "  + a); //Выводит сообщение с счетом игрока
-a++; } //Прибавление к переменной единицы, конец цикла
+var count = 0; // Задаем переменную-счетчик
+
+function saveGame(slot) {
+  localStorage.setItem('clickerCount' + slot, count); // Сохраняем счет в выбранный слот
+  alert("Игра сохранена в слот " + slot);
 }
-window.onload = ini;
+
+function loadGame(slot) {
+  var savedCount = localStorage.getItem('clickerCount' + slot); // Загружаем счет из выбранного слота
+  if(savedCount) {
+    count = parseInt(savedCount);
+    alert("Игра загружена из слота " + slot + ". Ваш счет - " + count);
+  } else {
+    alert("В слоте " + slot + " нет сохраненной игры.");
+  }
+}
+
+function updateCounter() {
+  count++; // Прибавление к переменной единицы
+  document.getElementById('score').textContent = "Ваш счет: " + count;
+}
+
+window.onload = function() {
+  document.getElementById('btn').onclick = updateCounter;
+};
 </script>
 </head>
 <body bgcolor="blue">
 <div style="text-align:center">
+<h1>Clicker</h1>
 <button id="btn">Старт</button>
+<p id="score">Ваш счет: 0</p>
+<button onclick="saveGame(1)">Сохранить в слот 1</button>
+<button onclick="saveGame(2)">Сохранить в слот 2</button>
+<button onclick="loadGame(1)">Загрузить из слота 1</button>
+<button onclick="loadGame(2)">Загрузить из слота 2</button>
 </div>
-<p font face="Arial">При нажатии на кнопку старт игра начнется.Её перезагрузка страницы не остановит. Только закрыть страницу</p>
 </body>
 </html>

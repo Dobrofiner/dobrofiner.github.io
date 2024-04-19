@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="description" content="Играйте в Консольную Игру, выбирая от 1 до 500 хп. Преодолевайте препятствия и используйте магию для победы!">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding-top: 50px;
+    }
+    #game-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+        background-color: #008CBA;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:disabled {
+        background-color: #cccccc;
+    }
+    button:hover:not(:disabled) {
+        background-color: #006080;
+    }
+    input[type=number] {
+        padding: 5px;
+    }
+</style>
+
+    <meta charset="UTF-8">
+    <title>Console Game</title>
+</head>
+<body>
+    <h1>Консольная Игра</h1>
+    <div id="game-container">
+        <p>Введите количество жизней: <input type="number" id="hp-input" value="100"></p>
+        <button id="start-game">Начать игру</button>
+        <p id="hp-display">Ваши хп: </p>
+        <button id="lose-hp">Жмите Enter и теряйте хп</button>
+        <p id="game-output"></p>
+    </div>
+
+    <script>
+        const gameContainer = document.getElementById('game-container');
+        const hpInput = document.getElementById('hp-input');
+        const hpDisplay = document.getElementById('hp-display');
+        const gameOutput = document.getElementById('game-output');
+        const startGameButton = document.getElementById('start-game');
+        const loseHpButton = document.getElementById('lose-hp');
+
+        let currentHp = 0;
+		
+function changeButtonColor(button, color) {
+    button.style.backgroundColor = color;
+}
+
+function endGame(victory) {
+    if (victory) {
+        gameOutput.textContent += "Поздравляем! Вы выиграли!\n";
+        console.log("Игра окончена: Победа.");
+        loseHpButton.style.backgroundColor = 'green'; // Зеленый цвет при победе
+    } else {
+        gameOutput.textContent += "Игра закончилась! Вы проиграли..\n";
+        console.log("Игра окончена: Поражение.");
+        loseHpButton.style.backgroundColor = 'gray'; // Серый цвет при поражении
+    }
+    loseHpButton.disabled = true;
+}
+function loseHp() {
+    const damage = Math.floor(Math.random() * 4) + 3;
+    currentHp -= damage;
+    changeButtonColor(loseHpButton, 'red'); // Красный цвет при получении урона
+    gameOutput.textContent += `Вы получили урон: -${damage} хп.\n`;
+    console.log(`Получен урон: -${damage} хп.`);
+    
+    // Применяем магическое исцеление
+    currentHp = magicHeal(currentHp);
+    
+    // Проверяем на чудесную победу
+    currentHp = miraculousVictory(currentHp);
+    if (currentHp === -1) {
+        endGame(true);
+    } else {
+        updateHpDisplay();
+        
+        // Проверяем условия окончания игры
+        if (currentHp <= 0) {
+            endGame(false);
+        }
+    }
+}
+
+function magicHeal(x) {
+    const healChance = Math.floor(Math.random() * 5) + 1;
+    if (healChance === 1) {
+        const healing = Math.floor(Math.random() * 21) + 10;
+        x += healing;
+        changeButtonColor(loseHpButton, 'blue'); // Синий цвет при магическом исцелении
+        gameOutput.textContent += `Магическое исцеление! Вы восстановили ${healing} хп.\n`;
+        console.log(`Магическое исцеление: +${healing} хп.`);
+    }
+    return x;
+}
+
+function miraculousVictory(x) {
+    const victoryChance = Math.floor(Math.random() * 100) + 1;
+    if (victoryChance === 1) {
+        gameOutput.textContent += "Чудо произошло! Вы мгновенно победили!\n";
+        changeButtonColor(loseHpButton, 'gold'); // Золотой цвет при победе
+        console.log("Чудо произошло! Мгновенная победа!"); // Логирование мгновенной победы
+        x = -1;
+    }
+    return x;
+}
+
+
+function endGame(victory) {
+    if (victory) {
+        gameOutput.textContent += "Поздравляем! Вы выиграли!\n";
+        changeButtonColor(loseHpButton, 'gold'); // Золотой цвет при победе
+    } else {
+        gameOutput.textContent += "Игра закончилась! Вы проиграли..\n";
+        changeButtonColor(loseHpButton, 'grey'); // Серый цвет при поражении
+    }
+    loseHpButton.disabled = true;
+}
+
+function updateHpDisplay() {
+    hpDisplay.textContent = `Ваши хп: ${currentHp}`;
+    if (currentHp <= 30 && currentHp > 0) {
+        gameOutput.textContent += "Внимание! У вас осталось мало хп!\n";
+    }
+}
+
+// Инициализация игры
+startGameButton.addEventListener('click', () => {
+    currentHp = parseInt(hpInput.value);
+    console.log(`Игра началась с ${currentHp} хп.`);
+    updateHpDisplay();
+    gameOutput.textContent = '';
+    loseHpButton.disabled = false;
+    changeButtonColor(loseHpButton, '#008CBA'); // Сброс цвета кнопки к начальному
+});
+
+loseHpButton.addEventListener('click', loseHp);
+
+    </script>
+</body>
+</html>

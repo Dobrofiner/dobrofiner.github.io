@@ -1,41 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta
   name="description"
-  content="Самая главная страница сайта Dobroposter Beta site. На ней вы можете найти:Minecraft Sandbox Ixer 2 Only pc Edition,Minutecraft,Добропостер Мод для Aground и другое.">
+  content="Dobrofiner Official Site: откройте для себя Minecraft Sandbox Ixer 2, Minutecraft и эксклюзивную модификацию Aground — все творения Dobrofiner.">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="icon" href="https://dobroposter.netlify.app/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://dobrofiner.netlify.app/favicon.ico" type="image/x-icon">
   <meta charset="utf-8" />
-  <title>Dobroposter Beta site</title>
+  <title>Dobrofiner Official site</title>
 <style>
 body {
-	background-color:#c4b256;
+    background-color: #c4b256;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-  .header {
+
+.header {
     background-color: #f1f1f1;
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
-  }
-  .sidebar {
-    float: left;
-    width: 20%;
+}
+
+.sidebar {
     background-color: #ccc;
-    padding: 20px;
-  }
-  .content {
-    float: left;
-    width: 80%;
-    padding: 20px;
-  }
-  p {
-color:black;
+    padding: 1.25rem;
+}
+
+.content {
+    padding: 1.25rem;
+}
+
+p {
+    color: black;
+}
+
+/* Flexbox layout for larger screens */
+@media screen and (min-width: 769px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        flex: 1;
+        max-width: 20%;
+    }
+
+    .content {
+        flex: 3;
+        max-width: 80%;
+    }
+}
+
+/* Stack elements on smaller screens */
+@media screen and (max-width: 768px) {
+    .sidebar,
+    .content {
+        width: 100%;
+    }
 }
 </style>
-  <!-- Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
@@ -43,13 +72,13 @@ color:black;
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(95221906, "init", {
+   ym(96986040, "init", {
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true
    });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/95221906" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/96986040" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <meta name="mailru-domain" content="yGfnttN7i88oLLkl" />
 <!--Start of Tawk.to Script-->
@@ -69,23 +98,22 @@ s0.parentNode.insertBefore(s1,s0);
 <body>
 
 <div class="header">
-  <h1><img src="https://dobroposter.netlify.app/favicon-32x32.png" alt="Site Icon">Dobroposter Beta Site<hr style="border: 2px solid blue;">
-Добро пожаловать на Dobroposter Beta site!
-На моем сайте вы можете найти:MSIOPE, MinuteCraft, Добропостер Мод для Aground и многое другое!Большие файлы могут быть в onedrive.
-<p> 
-Сайт находится в разработке. Там ссылки:
-</p>
+  <h1><img src="https://dobrofiner.netlify.app/favicon-32x32.png" alt="Site Icon">Dobrofiner Official Site<hr style="border: 2px solid blue;">
+Добро пожаловать на Dobrofiner Official Site!
+На моем сайте вы найдете мои разработки, включая MSIOPE и мод Доброфайнера для Aground, а также Minutecraft — очень мальнький клон Minecraft, созданный Future-cam, и множество других материалов! Для оптимизации загрузки сайта и экономии пространства большие файлы размещаются в облачных хранилищах, таких как OneDrive или Terabox.
 </img></h1>
 </div>
 
 <div class="sidebar">
   <h2>Боковая панель</h2>
   <p><ul>
-<li><a href="./index.html" target="f2">Главная</a></li>
-<li><a href="./clicker/click.html" target="f2">Clicker</a></li>
-<li><a href="./minutecraft/minutecraft.html" target="f2">Minutecraft</a></li>
-<li><a href="./msiope/index.html" target="f2">Minecraft Sandbox Ixer Only Pc Edition</a></li>
-<li><a href="./about_Dobroposter.html" target="f2">О Добропостере</a></li>
+<li><a href="./index.html" target="f2_blank">Главная</a></li>
+<li><a href="./clicker/click.html" target="_blank">Clicker</a></li>
+<li><a href="./minutecraft/minutecraft.html" target="_blank">Minutecraft</a></li>
+<li><a href="./msiope/index.html" target="_blank">Minecraft Sandbox Ixer Only Pc Edition</a></li>
+<li><a href="./about_Dobrofiner.html" target="_blank">О Доброфайнере</a></li>
+<li><a href="./stories.html" target="_blank">Истории О Доброфайнере</a></li>
+<li><a href="./console-game/index.html" target="_blank">Console Game</a></li>
 </ul></p>
 </div>
 
@@ -98,27 +126,23 @@ s0.parentNode.insertBefore(s1,s0);
 Щелкните левой кнопкой мыши, чтобы удалить блок.
 Щелкните правой кнопкой мыши, чтобы разместить блок.</p>
   <hr style="border: 2px solid blue;">
-  <p><a href="./dob_mod/dobroposter_mod.zip"><img src="./dob_mod/PREVIE.png" alt="Dobroposter Mod">Dobroposter Mod</img></a></p>
-  <p> Мой мод для Aground, подробное описание и его <a href="https://mod.io/g/aground/m/dobroposter-mod" target="_blank">страница</a> находятся в mod.io,там вы можете подписаться на него, и мой мод будет обновляться автоматически</a></p>
+  <p><a href="./dob_mod/dob_mod.zip"><img src="./dob_mod/PREVIE.png" alt="Dobrofiner Mod">Dobrofiner Mod</img></a></p>
+  <p> Мой мод для Aground, подробное описание и его <a href="https://mod.io/g/aground/m/Dobrofiner-mod" target="_blank">страница</a> находятся в mod.io,там вы можете подписаться на него, и мой мод будет обновляться автоматически</a></p>
   <hr style="border: 2px solid blue;">
     <p><a href="./dosbox_min/DOSBOX-MIMIMUM.zip"><img src="./dosbox_min/dosbox.png" alt="Dosbox">Скачать: Dosbox minimal Russian</img></a></p>
   <p> Моя минимальная русофицированая сборка эмулятора ДОС Dosbox</p>
     <hr style="border: 2px solid blue;">
-    <p><a href="./dob_gif/dobroposter.gif" target="_blank"><img src="./dob_gif/dobroposter.gif" alt="Dobroposter Gif">Dobroposter Gif</img></a></p>
-  <p>Анимация движения Добропостера.</p>
+    <p><a href="./dob_gif/Dobrofiner.gif" target="_blank"><img src="./dob_gif/Dobrofiner.gif" alt="Dobrofiner Gif">Dobrofiner Gif</img></a></p>
+  <p>Анимация движения Доброфайнера.</p>
   <hr style="border: 2px solid blue;">
       <p><a href="./minutecraft_ext/minutecraft_ext.zip"><img src="./minutecraft_ext/minutecraft.png" alt="MinuteCraft Extension">Minutecraft Extension</img></a></p>
-  <p> Это Minutecraft в расширении. Для установки распакуйте куда-нибудь и откройте chrome://extensions и выберите загрузить распакованное расширение</p>
+  <p>Это Minutecraft в расширении. Для установки распакуйте куда-нибудь и откройте chrome://extensions и выберите загрузить распакованное расширение</p>
     <hr style="border: 2px solid blue;">
-      <p><a href="https://disk.yandex.ru/d/cn5MzdiGd5yFvA" target="_blank">Скачать: ScratchToExe Converter tools</a></p>
-  <p> Чтобы сконвертировать ваш scratch 3 проект в exe вам надо: скачать этот zip-архив, разаархировать его в любое место, зайти в папку swftoexe и запустить файл swftoexe.exe.
-  Это установщик программы Swf To Exe Converter.После этого пройдите в папку этой программы и замените файл player10 на тот который в папке .\swftoexe. После того как вы заменили этот файл вам надо
-  скачать sb3-файл вашего Scratch-проекта.После этого запустите sb3tosb2.py, он требует установленный python, скачать его можно <a href="https://www.python.org/downloads/">здесь</a>.С помощью sb3tosb2.py
-  сконвертируйте ваш sb3-файл в sb2 формат.Теперь с помощью программы flashplayer_32_sa.exe откройте Converter.swf. Выберете там ваш сконвертированный sb3 в sb2 файл, выставьте там ваши настройки и нажмите кнопку convert, после нажатия на кнопку сахраните куда-нибудь
-  полученный swf-файл. Теперь откройте программу Swf To Exe Converter, выберите там ваш swf-файл и нажмите convert.Всё, ваш exe-файл готов. 
+      <p><a href="https://dobrofiner.github.io/scratch-to-exe-or-web-app/" target="_blank">Scratch To Exe Or Web App</a></p>
+  <p>Инновационный метод преобразования HTML в .exe. Подробные инструкции в репозитории на <a href="https://github.com/Dobrofiner/scratch-to-exe-or-web-app">GitHub</a>. Начните трансформацию ваших веб-приложений сегодня.
   </p>
       <hr style="border: 2px solid blue;">
-      <p><a href="./msiope/index.html" target="f2"><img src="./msiope/icons/loading-logo.png" alt="Logotipe"></img></a></p>
+      <p><a href="./msiope/index.html" target="_blank"><img src="./msiope/icons/loading-logo.png" alt="Logotipe"></img></a></p>
 <p> Minecraft Sandbox Ixer 2 Only pc edition  is the updated version of Minecraft Sandbox Ixer 2 Construct 2 Edition, it is only for pc but you can play on mobile! Controls of the game:
 s - save to slot 1
 l - load from slot 1
@@ -136,7 +160,7 @@ P -TO PAUSE GAME
 O TO UNPAUSE                                                                                                                         
 1,2 TO CHANGE SKIN, ON MOBILE USE BUTTONS
 Credits:
-All code by Dobroposter top
+All code by Dobrofiner top
 Sprites by BBoy Huggy-Waggy
 Engine -Construct 3                        
   </p>
