@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobrofiner Official Site Nes Games Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .game {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .game img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .game h3 {
+            color: #333;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .game p {
+            color: #666;
+            font-size: 14px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+<script type="text/javascript">
+  VK.init({ apiId: 51907932, onlyWidgets: true });
+</script>
+</head>
+<body>
+    <h1>NES Games на Dobrofiner Official Site</h1>
+    <div class="game-container">
+        <!-- Для каждой игры повторите блок .game -->
+        <div class="game">
+            <img src="./images/battle_kid_2.png" alt="Battle Kid 2">
+            <h3>Battle Kid 2</h3>
+            <p>Приключенческая игра в стиле ретро.</p>
+            <a href="./battle_kid_2.html">Играть</a>
+        </div>
+        <div class="game">
+            <img src="./images/famidash.png" alt="Famidash">
+            <h3>Famidash</h3>
+            <p>Ремейк(или Демейк) Geometry Dash для NES.</p>
+            <a href="./famidash.html">Играть</a>
+        </div>
+		        <div class="game">
+            <img src="./images/mario.png" alt="Mario Rom Hack">
+            <h3>Mario Rom Hack</h3>
+            <p>Измененая версия Super Mario Bros в которой были изменены некоторые значения, немножко первый уровень и почему-то оно стало весить 256 кб.</p>
+            <a href="./mario.html">Играть</a>
+			</div>
+					        <div class="game">
+            <img src="./images/mario_original.png" alt="Mario Original">
+            <h3>Mario Original</h3>
+            <p>Super Mario bros это классическая игра платформер в котором вы играете за Марио, где ваша цель спасти принцессу Пич.</p>
+            <a href="./mario_original.html">Играть</a>
+			</div>
+								        <div class="game">
+            <img src="./images/NESOS.png" alt="Mario Original">
+            <h3>NESOS</h3>
+            <p>NESOS — это операционная система, разработанная для игровых систем Nintendo Entertainment и Family Computer.
+			Она включает в себя два основных приложения: текстовый процессор и настройки. Текстовый процессор позволяет пользователям выводить символы и определённые блоки на экран, а затем сохранять эти данные в виде файла для последующего использования или редактирования.</p>
+            <a href="./nesos.html">Играть</a>
+			        </div>
+			        <div class="game">
+            <img src="./images/win98nes.png" alt="Windows 98(NES)">
+            <h3>Windows 98(NES)</h3>
+            <p>Это китайский Windows 98, адаптированный для NES!</p>
+            <a href="./win98nes.html">Играть</a>
+        </div>
+    </div>
+	
+</body>
+<div id="vk_comments"></div>
+<script type="text/javascript">
+  VK.Widgets.Comments("vk_comments", {limit: 20, attach: "*"});
+</script>
+</html>
